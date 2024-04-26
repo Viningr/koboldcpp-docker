@@ -1,5 +1,5 @@
 # cuda devel image for base, best build compatibility
-FROM nvidia/cuda:12.1.1-devel-ubuntu22.04 as builder
+FROM nvidia/cuda:12.4.0-devel-ubuntu22.04 as builder
 
 # Update base image and install dependencies
 RUN apt-get update && apt-get upgrade -y \
@@ -46,7 +46,7 @@ COPY --from=builder /koboldcpp /koboldcpp
 
 WORKDIR /koboldcpp
 
-EXPOSE 80
+EXPOSE 5001
 
 ENV CUDA_HOME='/usr/local/cuda-12.1'
 ENV PATH=/usr/local/cuda-12.1/bin${PATH:+:${PATH}}

@@ -17,7 +17,7 @@ echo $RELEASE_TAG
 CLONE_ARG="--branch $RELEASE_TAG"
 
 # Build the Docker image
-docker build --build-arg clone_arg="$CLONE_ARG" -t noneabove1182/koboldcpp-gpu .
+docker build --build-arg clone_arg="$CLONE_ARG" -t viningr/koboldcpp-gpu .
 
 # Check if Docker build was successful
 if [ $? -ne 0 ]; then
@@ -26,8 +26,8 @@ if [ $? -ne 0 ]; then
 fi
 
 # Tag the Docker image
-docker tag noneabove1182/koboldcpp-gpu:latest noneabove1182/koboldcpp-gpu:$RELEASE_TAG
+docker tag viningr/koboldcpp-gpu:latest viningr/koboldcpp-gpu:$RELEASE_TAG
 
 # Push the Docker images
-docker push noneabove1182/koboldcpp-gpu:latest
-docker push noneabove1182/koboldcpp-gpu:$RELEASE_TAG
+# docker push viningr/koboldcpp-gpu:latest
+# docker push viningr/koboldcpp-gpu:$RELEASE_TAG
