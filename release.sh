@@ -29,5 +29,5 @@ fi
 docker tag viningr/koboldcpp-gpu:latest viningr/koboldcpp-gpu:$RELEASE_TAG
 
 # Push the Docker images
-# docker push viningr/koboldcpp-gpu:latest
-# docker push viningr/koboldcpp-gpu:$RELEASE_TAG
+docker push viningr/koboldcpp-gpu:latest
+docker push viningr/koboldcpp-gpu:$RELEASE_TAG
