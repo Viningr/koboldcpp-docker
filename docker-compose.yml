@@ -11,7 +11,7 @@ services:
       - NVIDIA_DRIVER_CAPABILITIES=all
       - EXTERNAL_IP=${EXTERNAL_IP}
     ports:
-      - '192.168.1.18:5001:5001'
+      - '192.168.1.191:5001:5001'
     image: '127.0.0.1:5000/koboldcpp-gpu:latest'
     ulimits:
       memlock: -1
