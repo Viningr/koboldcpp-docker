@@ -5,7 +5,10 @@ services:
     restart: always
     volumes:
       - '${MODEL_DIR}:/models'
+    runtime: nvidia
     environment:
+      - NVIDIA_VISIBLE_DEVICES=nvidia.com/gpu=GPU-1be63d21-d8f5-459d-e039-5e972366e474
+      - NVIDIA_DRIVER_CAPABILITIES=all
       - EXTERNAL_IP=${EXTERNAL_IP}
     ports:
       - '192.168.1.18:5001:5001'
